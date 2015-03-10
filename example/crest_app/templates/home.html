@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load humanize %}
+{% load eve_tags %}
+
+{% block title %}Home – {{ block.super }}{% endblock %}
+
+{% block jumbotron %}
+    <h1>Welcome, {{ user.get_full_name }}!</h1>
+    <div class="media">
+        <div class="media-left">
+            <img class="media-object" src='{{ user.get_portrait_url }}' alt='Portrait' />
+        </div>
+        <div class="media-body">
+            <p>I can see your CharacterID from here...</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <h2>Public CREST</h2>
+        <p>Here's some public CREST data. This would work without login, too.</p>
+
+        <h4>Users logged in TQ:
+            <span class="label label-success">{{ public_crest.user_count }}</span></h4>
+
+        <h4>Incursions going on:
+            <span class="label label-danger">{{ public_crest.incursions|length }}</span></h4>
+        <table class="table table-striped table-hover table-condensed">
+            <tr>
+                <th>System</th>
+                <th>Constellation</th>
+                <th>State</th>
+                <th>Boss</th>
+                <th class="text-right">Influence</th>
+            </tr>
+            {% for incursion in public_crest.incursions %}
+                <tr>
+                    <td>{{ incursion.stagingSolarSystem.name }}</td>
+                    <td>{{ incursion.constellation.name }}</td>
+                    <td>{{ incursion.state }}</td>
+                    <td>{{ incursion.hasBoss|yesno }}</td>
+                    <td class="text-right">{% widthratio incursion.influence 1 100 %} %</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Authenticated CREST</h2>
+        <p>Here's some Authenticated CREST data...</p>
+
+        <h4>
+            <img src='https://image.eveonline.com/Type/34_64.png' />
+            Sell orders for Tritanium in The Forge</h4>
+        <table class="table table-striped table-hover table-condensed sell">
+            <tr>
+                <th>Location</th>
+                <th class="text-right">Volume</th>
+                <th class="text-right">Price</th>
+            </tr>
+            {% for order in authed_crest.sell_orders %}
+                <tr>
+                    <td>{{ order.location.name }}</td>
+                    <td class="text-right">{{ order.volume | intcomma }}</td>
+                    <td class="text-right">{{ order.price | isk }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h4>
+            <img src='https://image.eveonline.com/Type/34_64.png' />
+            Buy orders for Tritanium in The Forge</h4>
+        <table class="table table-striped table-hover table-condensed buy">
+            <tr>
+                <th>Location</th>
+                <th class="text-right">Volume</th>
+                <th class="text-right">Price</th>
+            </tr>
+            {% for order in authed_crest.buy_orders %}
+                <tr>
+                    <td>{{ order.location.name }}</td>
+                    <td class="text-right">{{ order.volume | intcomma }}</td>
+                    <td class="text-right">{{ order.price | isk }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
