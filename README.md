@@ -35,7 +35,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-* point your browser to http://localhost:8000/
+* point your browser to [http://localhost:8000/](http://localhost:8000/)
 
 * ???
 
