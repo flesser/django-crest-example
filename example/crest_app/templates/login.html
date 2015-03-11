@@ -6,8 +6,16 @@
 
 {% block jumbotron %}
     <h1>Hello, world!</h1>
-    <p>This is an example for a simple Django App with EVE Online Single Sign-On (SSO) and authenticated CREST access.<br />
-    Use the Login button to see some market data!</p>
+    <p>
+        This is an example for a simple Django App with EVE Online Single Sign-On (SSO) and authenticated CREST access.
+    </p><p>
+        It depends on <a href="http://psa.matiasaguirre.net/" target="_blank">python-social-auth</a>
+        to integrate EVE SSO with Django's builtin user authentication system and uses
+        <a href="https://forums.eveonline.com/default.aspx?g=posts&t=398676" target="_blank">pycrest</a>
+        to interact with the CREST API.
+    </p><p>
+        Use the Login button below to see some market data!
+    </p>
     <p><a href="{% url 'social:begin' backend='eveonline' %}">
         <img class='img-responsive center-block'
             src='{% static 'img/EVE_SSO_Login_Buttons_Large_White.png' %}'
@@ -16,6 +24,4 @@
 </div>
 {% endblock %}
 
-{% block content %}
-<!-- move along, nothing to see here... -->
-{% endblock %}
+{% block content %}{% endblock %}
