@@ -1,6 +1,6 @@
 # django-crest-example
 This is an example for a simple Django App with EVE Online Single Sign-On (SSO) and authenticated CREST access.
-It depends on [python-social-auth](http://psa.matiasaguirre.net/) to integrate EVE SSO with Django's builtin user authentication system and uses [pycrest](https://forums.eveonline.com/default.aspx?g=posts&t=398676) to interact with the CREST API.
+It depends on [python-social-auth](http://psa.matiasaguirre.net/) to integrate EVE SSO with Django's builtin user authentication system and uses [PyCrest](https://forums.eveonline.com/default.aspx?g=posts&t=398676) to interact with the CREST API.
 
 ## Live Demo
 A live demo is available at http://django-crest-example.dubiose-briefkastenfirma.de/
@@ -13,7 +13,7 @@ If you want to try it out on your own server, loosely follow these steps:
   git clone https://github.com/flesser/django-crest-example.git
   ```
 
-* Install [pycrest](https://github.com/Dreae/PyCrest):
+* Install [PyCrest](https://github.com/Dreae/PyCrest):
   ```bash
   pip install pycrest
   ```
