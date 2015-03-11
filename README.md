@@ -15,9 +15,9 @@ git clone https://github.com/flesser/django-crest-example.git
 
 * Register a new application on https://developers.eveonline.com/applications
   - choose name and description as you like
-  - for **Connection Type** select **CREST Access**
-  - in **Permissions** add **publicData** to the Requested Scopes List
-  - as **Callback URL** use `http://your-server.com/complete/eveonline/` (or `http://localhost:8000/complete/eveonline/` if you're using the Django development server)
+  - for *Connection Type* select **CREST Access**
+  - in *Permissions* add **publicData** to the Requested Scopes List
+  - as *Callback URL* use `http://your-server.com/complete/eveonline/` (or `http://localhost:8000/complete/eveonline/` if you're using the Django development server)
   
 * edit `example/settings.py` and enter your application's Client ID and Secret Key:
 ```python
