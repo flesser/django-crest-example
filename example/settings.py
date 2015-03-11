@@ -13,6 +13,11 @@ import django.conf.global_settings as DEFAULT_SETTINGS
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# Register an application at https://developers.eveonline.com/applications
+# and put your Client ID and Secret Key here. View README.md for more details.
+# SECURITY WARNING: keep this secret!
+SOCIAL_AUTH_EVEONLINE_KEY = '<Your EVE CREST Application Key>'
+SOCIAL_AUTH_EVEONLINE_SECRET = '<Your EVE CREST Application Secret>'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -80,12 +85,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.debug.debug'
 )
 
-# SECURITY WARNING: keep this secret!
-SOCIAL_AUTH_EVEONLINE_KEY = '<Your EVE CREST Application Key>'
-SOCIAL_AUTH_EVEONLINE_SECRET = '<Your EVE CREST Application Secret>'
-
 SOCIAL_AUTH_EVEONLINE_SCOPE = ['publicData']
-
 SOCIAL_AUTH_CLEAN_USERNAMES = False
 
 LOGIN_URL = '/login/'
