@@ -9,9 +9,9 @@ A live demo is available at http://django-crest-example.dubiose-briefkastenfirma
 If you want to try it out on your own server, loosely follow these steps:
 
 * Get the code:
-```bash
-git clone https://github.com/flesser/django-crest-example.git
-```
+  ```bash
+  git clone https://github.com/flesser/django-crest-example.git
+  ```
 
 * Install [pycrest](https://github.com/Dreae/PyCrest):
   ```bash
@@ -32,20 +32,20 @@ git clone https://github.com/flesser/django-crest-example.git
   - as *Callback URL* use `http://your-server.com/complete/eveonline/` (or `http://localhost:8000/complete/eveonline/` if you're using the Django development server)
   
 * edit `example/settings.py` and enter your application's Client ID and Secret Key:
-```python
-SOCIAL_AUTH_EVEONLINE_KEY = '<Your EVE CREST Application Key>'
-SOCIAL_AUTH_EVEONLINE_SECRET = '<Your EVE CREST Application Secret>'
-```
+  ```python
+  SOCIAL_AUTH_EVEONLINE_KEY = '<Your EVE CREST Application Key>'
+  SOCIAL_AUTH_EVEONLINE_SECRET = '<Your EVE CREST Application Secret>'
+  ```
 
 * initialize the database:
-```bash
-python manage.py migrate
-```
+  ```bash
+  python manage.py migrate
+  ```
 
 * run development server:
-```bash
-python manage.py runserver
-```
+  ```bash
+  python manage.py runserver
+  ```
 
 * point your browser to [http://localhost:8000/](http://localhost:8000/)
 
