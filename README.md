@@ -13,6 +13,18 @@ If you want to try it out on your own server, loosely follow these steps:
 git clone https://github.com/flesser/django-crest-example.git
 ```
 
+* Install [pycrest](https://github.com/Dreae/PyCrest):
+  ```bash
+  pip install pycrest
+  ```
+
+* Install [python-social-auth](https://github.com/omab/python-social-auth):  
+  *Note: as of writing this, the EVE SSO backend is not in a release yet (propably will be in v0.2.3).
+  So for now, you need to install from Git:*
+  ```bash
+  pip install git+https://github.com/omab/python-social-auth.git
+  ```
+
 * Register a new application on https://developers.eveonline.com/applications
   - choose name and description as you like
   - for *Connection Type* select **CREST Access**
