@@ -8,6 +8,6 @@ Login buttons taken from https://developers.eveonline.com/resource/single-sign-o
 > easily be able to quickly identify that it supports the EVE SSO.
 
 ![](EVE_SSO_Login_Buttons_Large_Black.png)
-![](EVE_SSO_Login_Buttons_Large_White.png)
+![](EVE_SSO_Login_Buttons_Large_White.png)  
 ![](EVE_SSO_Login_Buttons_Small_Black.png)
 ![](EVE_SSO_Login_Buttons_Small_White.png)
