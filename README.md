@@ -13,7 +13,7 @@ If you want to try it out on your own server, loosely follow these steps:
   git clone https://github.com/flesser/django-crest-example.git
   ```
 
-* Install dependencies (mainly [PyCrest](https://github.com/Dreae/PyCrest) and [Python Social Auth](https://github.com/omab/python-social-auth):
+* Install dependencies (mainly [PyCrest](https://github.com/Dreae/PyCrest) and [Python Social Auth](https://github.com/omab/python-social-auth)):
   ```bash
   pip install -r requirements.txt
   ```
