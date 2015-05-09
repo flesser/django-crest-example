@@ -13,16 +13,9 @@ If you want to try it out on your own server, loosely follow these steps:
   git clone https://github.com/flesser/django-crest-example.git
   ```
 
-* Install [PyCrest](https://github.com/Dreae/PyCrest):
+* Install dependencies (mainly [PyCrest](https://github.com/Dreae/PyCrest) and [Python Social Auth](https://github.com/omab/python-social-auth):
   ```bash
-  pip install pycrest
-  ```
-
-* Install [Python Social Auth](https://github.com/omab/python-social-auth):  
-  *Note: as of writing this, the EVE SSO backend is not in a release yet (propably will be in v0.2.3).
-  So for now, you need to install from Git:*
-  ```bash
-  pip install git+https://github.com/omab/python-social-auth.git
+  pip install -r requirements.txt
   ```
 
 * Register a new application on https://developers.eveonline.com/applications
@@ -30,7 +23,7 @@ If you want to try it out on your own server, loosely follow these steps:
   - for *Connection Type* select **CREST Access**
   - in *Permissions* add **publicData** to the Requested Scopes List
   - as *Callback URL* use `http://your-server.com/complete/eveonline/` (or `http://localhost:8000/complete/eveonline/` if you're using the Django development server)
-  
+
 * edit `example/settings.py` and enter your application's Client ID and Secret Key:
   ```python
   SOCIAL_AUTH_EVEONLINE_KEY = '<Your EVE CREST Application Key>'
