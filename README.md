@@ -1,16 +1,18 @@
+**THIS PROJECT IS OUTDATED.** The CREST API was discontinued.
+
 # django-crest-example
 This is an example for a simple Django App with EVE Online Single Sign-On (SSO) and authenticated CREST access.
 It depends on [Python Social Auth](http://psa.matiasaguirre.net/) to integrate EVE SSO with Django's builtin user authentication system and uses [PyCrest](https://forums.eveonline.com/default.aspx?g=posts&t=398676) to interact with the CREST API.
 
 ## Live Demo
-A live demo is available at http://django-crest-example.dubiose-briefkastenfirma.de/
+A live demo is not available anymore, since CREST is discontinued.
 
 ## Getting started
 If you want to try it out on your own server, loosely follow these steps:
 
 1. Get the code:
   ```bash
-  git clone https://github.com/flesser/django-crest-example.git
+  git clone https://gitlab.com/flesser/django-crest-example.git
   ```
 
 2. Install dependencies (mainly [PyCrest](https://github.com/Dreae/PyCrest) and [Python Social Auth](https://github.com/omab/python-social-auth)):
